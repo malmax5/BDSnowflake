@@ -117,7 +117,6 @@ insert into FactSales
     storeId,
     supplierId,
     quantity,
-    unitPrice,
     totalPrice
 )
 select 
@@ -128,7 +127,6 @@ select
     store.storeId,
     supplier.supplierId,
     raw.sale_quantity,
-    raw.product_price,
     raw.sale_total_price
 from raw_data raw
 join DimCustomers customer on raw.customer_email = customer.email

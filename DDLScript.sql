@@ -82,13 +82,12 @@ create table FactSales
 (
     saleId serial primary key,
     saleDate date,
-    
+
     customerId int references DimCustomers(customerId),
     sellerId int references DimSellers(sellerId),
     productId int references DimProducts(productId),
     storeId int references DimStores(storeId),
     supplierId int references DimSuppliers(supplierId),
     quantity int,
-    unitPrice numeric(10,2),
     totalPrice numeric(15,2)
 );
